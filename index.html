@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Text to PDF Chatbot</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="app-shell">
+      <section class="chat-panel" aria-label="Text to PDF chatbot">
+        <header class="topbar">
+          <div class="brand-lockup">
+            <div class="brand-mark" aria-hidden="true">PDF</div>
+            <div>
+              <p class="eyebrow">PDF Assistant</p>
+              <h1>Text to PDF chatbot</h1>
+            </div>
+          </div>
+          <button class="icon-button" id="clearBtn" type="button" title="Clear text" aria-label="Clear text">
+            <span aria-hidden="true">×</span>
+          </button>
+        </header>
+
+        <div class="conversation" id="conversation" aria-live="polite">
+          <article class="message bot">
+            <div class="avatar" aria-hidden="true">AI</div>
+            <div class="bubble">
+              Paste or type any text below. I will turn it into a neat PDF you can download.
+            </div>
+          </article>
+        </div>
+
+        <form class="composer" id="pdfForm">
+          <section class="template-panel" aria-label="Sample letter templates">
+            <div class="section-head">
+              <div>
+                <p class="eyebrow">Templates</p>
+                <h2>Sample letters</h2>
+              </div>
+              <span>Editable</span>
+            </div>
+            <div class="template-grid">
+              <button class="template-card" type="button" data-template="formal">
+                <strong>Formal Letter</strong>
+                <span>Clean request or official message</span>
+              </button>
+              <button class="template-card" type="button" data-template="job">
+                <strong>Job Application</strong>
+                <span>Role interest and experience</span>
+              </button>
+              <button class="template-card" type="button" data-template="business">
+                <strong>Business Proposal</strong>
+                <span>Offer, scope, and next step</span>
+              </button>
+              <button class="template-card" type="button" data-template="thankyou">
+                <strong>Thank You Letter</strong>
+                <span>Warm follow-up note</span>
+              </button>
+            </div>
+          </section>
+
+          <label class="visually-hidden" for="textInput">Text to convert</label>
+          <div
+            id="textInput"
+            class="editor"
+            contenteditable="true"
+            role="textbox"
+            aria-label="Text to convert"
+            data-placeholder="Type or paste your text here..."
+          ></div>
+
+          <div class="controls">
+            <label>
+              File name
+              <input id="fileName" type="text" value="my-text-pdf" maxlength="60" />
+            </label>
+            <label>
+              Title
+              <input id="docTitle" type="text" value="My PDF Document" maxlength="80" />
+            </label>
+            <label>
+              Page size
+              <select id="pageSize">
+                <option value="a4">A4</option>
+                <option value="letter">Letter</option>
+              </select>
+            </label>
+          </div>
+
+          <fieldset class="design-tools">
+            <legend>Design</legend>
+            <label>
+              Text color
+              <input id="textColor" type="color" value="#202124" />
+            </label>
+            <button class="tool-button" id="applyColor" type="button">Apply color</button>
+            <button class="tool-button" id="boldText" type="button">Bold</button>
+            <label>
+              Font
+              <select id="fontFamily">
+                <option value="helvetica">Helvetica</option>
+                <option value="times">Times</option>
+                <option value="courier">Courier</option>
+              </select>
+            </label>
+            <label>
+              Font size
+              <input id="fontSize" type="number" value="12" min="8" max="32" />
+            </label>
+            <button class="tool-button" id="applyFont" type="button">Apply font</button>
+            <button class="tool-button" id="applySize" type="button">Apply size</button>
+          </fieldset>
+
+          <div class="actions">
+            <button class="secondary" id="previewBtn" type="button">Preview</button>
+            <button class="primary" type="submit">Download PDF</button>
+          </div>
+        </form>
+      </section>
+
+      <aside class="preview-panel" aria-label="PDF preview">
+        <div class="preview-header">
+          <div>
+            <p class="eyebrow">Live Preview</p>
+            <h2 id="previewTitle">My PDF Document</h2>
+          </div>
+          <span id="wordCount">0 words</span>
+        </div>
+        <div class="paper">
+          <div id="previewContent" class="preview-content">
+            Your PDF preview will appear here.
+          </div>
+        </div>
+      </aside>
+    </main>
+
+    <script src="app.js"></script>
+  </body>
+</html>

@@ -709,3 +709,58 @@ select {
     object-fit:contain;
     margin-right:12px;
 }
+/* SEO Content Section */
+.seo-content {
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 30px;
+  background: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+}
+
+.seo-content h2 {
+  color: #2563eb;
+  font-size: 1.8rem;
+  margin-bottom: 12px;
+  margin-top: 25px;
+}
+
+.seo-content p {
+  color: #555;
+  line-height: 1.8;
+  font-size: 1rem;
+  margin-bottom: 15px;
+}
+
+.seo-content ul {
+  padding-left: 20px;
+  margin-top: 10px;
+}
+
+.seo-content ul li {
+  color: #444;
+  margin-bottom: 10px;
+  line-height: 1.6;
+}
+
+.seo-content ul li::marker {
+  color: #2563eb;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .seo-content {
+    margin: 20px;
+    padding: 20px;
+  }
+
+  .seo-content h2 {
+    font-size: 1.4rem;
+  }
+
+  .seo-content p,
+  .seo-content ul li {
+    font-size: 0.95rem;
+  }
+}

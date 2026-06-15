@@ -49,6 +49,42 @@ select,
   font: inherit;
 }
 
+.ai-generator{
+  background:#fff;
+  padding:20px;
+  border-radius:12px;
+  margin-bottom:20px;
+  border:1px solid #e5e7eb;
+}
+
+.ai-generator h3{
+  margin-bottom:15px;
+}
+
+.ai-generator label{
+  display:block;
+  margin-top:10px;
+  margin-bottom:5px;
+  font-weight:600;
+}
+
+.ai-generator input,
+.ai-generator select{
+  width:100%;
+  padding:10px;
+  border:1px solid #d1d5db;
+  border-radius:8px;
+}
+
+.ai-generator button{
+  margin-top:15px;
+  padding:12px 20px;
+  background:#2563eb;
+  color:#fff;
+  border:none;
+  border-radius:8px;
+  cursor:pointer;
+}
 .app-shell {
   display: grid;
   grid-template-columns: minmax(320px, 0.95fr) minmax(320px, 1.05fr);
@@ -57,6 +93,7 @@ select,
   min-height: calc(100vh - 48px);
   margin: 24px auto;
 }
+
 
 .chat-panel,
 .preview-panel {
@@ -596,6 +633,38 @@ select {
     min-height: 520px;
     padding: 34px 24px;
   }
+.dark{
+  background:#111827;
+  color:white;
+}
+
+.dark .chat-panel,
+.dark .preview-panel{
+  background:#1f2937;
+  color:white;
+}
+}
+.site-footer{
+    background:#111827;
+    color:#fff;
+    text-align:center;
+    padding:20px;
+    margin-top:30px;
+}
+
+.footer-links{
+    margin-bottom:10px;
+}
+
+.footer-links a{
+    color:#fff;
+    text-decoration:none;
+    margin:0 12px;
+    font-size:14px;
+}
+
+.footer-links a:hover{
+    color:#60a5fa;
 }
 .site-footer{
     margin-top:40px;
@@ -633,4 +702,10 @@ select {
     text-align:center;
     margin-top:30px;
     opacity:.8;
+}
+.site-logo{
+    width:60px;
+    height:60px;
+    object-fit:contain;
+    margin-right:12px;
 }

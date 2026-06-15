@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://texttopdforpin.vercel.app/sitemap.xml
+Sitemap: https://text-to-pdf-zeta.vercel.app/sitemap.xml
